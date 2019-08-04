@@ -8,7 +8,22 @@ import javax.swing.JOptionPane;
 
 public class GuessingPi {
 	// 1. Make a main method and make sure your program can run
-
+public static void main(String[] args) {
+	String pi= "3.1415926535";
+	//System.out.println(pi.substring(0,4));
+	//pi.length();
+	for (int i = 0; i < pi.length()-1; i++) {
+		System.out.print(pi.charAt(i));
+	String stuff=	JOptionPane.showInputDialog("What is the next digit of pi?");
+	if (stuff.equals(""+pi.charAt(i+1))) {
+		JOptionPane.showMessageDialog(null, "Correct");
+	}
+	else {
+		JOptionPane.showMessageDialog(null, "incorrect, Now you should start over");
+		break;
+	}
+	}
+}
 		// 2. Make a String variable to hold the value of Pi.
 		//    Get the first few digits from http://www.piday.org/million/.
 
